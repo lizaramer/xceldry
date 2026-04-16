@@ -49,6 +49,9 @@ export function Hero() {
           src={heroConfig.backgroundImage}
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           style={{ filter: 'blur(15px) brightness(0.7)' }}
           onLoad={() => setImageLoaded(true)}
         />
@@ -81,6 +84,9 @@ export function Hero() {
             src={heroConfig.backgroundImage}
             alt="Hero Sharp"
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+            fetchPriority="low"
           />
         </div>
       </div>

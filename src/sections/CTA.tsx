@@ -1,4 +1,3 @@
-import { } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedButton } from '@/components/AnimatedButton';
@@ -18,6 +17,8 @@ export function CTA() {
           src={ctaConfig.backgroundImage}
           alt="Background"
           className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-exvia-black/60" />
       </div>

@@ -96,6 +96,9 @@ export function Testimonials() {
                     src={testimonial.image}
                     alt={testimonial.author}
                     className="w-full h-full object-cover"
+                    loading={index === activeIndex ? 'eager' : 'lazy'}
+                    decoding="async"
+                    fetchPriority={index === activeIndex ? 'high' : 'low'}
                   />
                 </div>
               ))}

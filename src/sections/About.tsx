@@ -1,4 +1,3 @@
-import { } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimation';
 import { aboutConfig } from '@/config';
@@ -100,6 +99,8 @@ export function About() {
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-full object-cover transition-transform duration-500 ease-out-quad group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-exvia-black/0 group-hover:bg-exvia-black/10 transition-colors duration-300" />
                   </div>

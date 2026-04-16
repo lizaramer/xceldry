@@ -1,4 +1,3 @@
-import { } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation, useStaggerAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowUpRight } from 'lucide-react';
@@ -23,6 +22,8 @@ function ProjectCard({ project, index, isVisible }: { project: { title: string; 
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-700 ease-out-cubic group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
