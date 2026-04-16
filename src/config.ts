@@ -13,6 +13,8 @@ export const siteConfig: SiteConfig = {
   description: "Pañales para adulto de calidad premium como TENA y Content, pero sin pagar por la marca. Ahorra hasta 20%. Venta por mayoreo, medio mayoreo y suscripción en Monterrey, NL.",
 };
 
+const withBase = (path: string): string => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 // Navigation configuration
 export interface NavLink {
   label: string;
@@ -56,7 +58,7 @@ export const heroConfig: HeroConfig = {
     "Ahorro 20%",
     "Monterrey NL"
   ],
-  backgroundImage: "/images/hero-bg.jpg",
+  backgroundImage: withBase("images/hero-bg.jpg"),
 };
 
 // About section configuration
@@ -91,10 +93,10 @@ export const aboutConfig: AboutConfig = {
     { value: "24h", label: "Entrega\nen Monterrey" },
   ],
   images: [
-    { src: "/images/about-1.jpg", alt: "Productos XcelDry de calidad premium" },
-    { src: "/images/about-2.jpg", alt: "Dignidad para el adulto mayor" },
-    { src: "/images/about-3.jpg", alt: "Cuidado profesional" },
-    { src: "/images/about-4.jpg", alt: "Compromiso con la calidad" },
+    { src: withBase("images/about-1.jpg"), alt: "Productos XcelDry de calidad premium" },
+    { src: withBase("images/about-2.jpg"), alt: "Dignidad para el adulto mayor" },
+    { src: withBase("images/about-3.jpg"), alt: "Cuidado profesional" },
+    { src: withBase("images/about-4.jpg"), alt: "Compromiso con la calidad" },
   ],
 };
 
@@ -120,25 +122,25 @@ export const servicesConfig: ServicesConfig = {
       iconName: "Package",
       title: "Venta por Mayoreo",
       description: "Ideal para asilos, casas de adultos mayores y distribuidores. Precios especiales para compras en gran volumen. Facturación disponible.",
-      image: "/images/service-3.jpg",
+      image: withBase("images/service-3.jpg"),
     },
     {
       iconName: "Boxes",
       title: "Medio Mayoreo",
       description: "Perfecto para cuidadores y enfermeras que atienden múltiples pacientes. Cantidades intermedias con descuentos atractivos.",
-      image: "/images/service-1.jpg",
+      image: withBase("images/service-1.jpg"),
     },
     {
       iconName: "CalendarCheck",
       title: "Suscripción Mensual",
       description: "Para familias ocupadas que prefieren el surtido automático. Entrega programada cada mes en tu domicilio en Monterrey. Sin preocupaciones.",
-      image: "/images/service-2.jpg",
+      image: withBase("images/service-2.jpg"),
     },
     {
       iconName: "Headphones",
       title: "Atención Personalizada",
       description: "Asesoría experta para elegir el producto adecuado según las necesidades del paciente. Te ayudamos a encontrar la talla y modelo perfectos.",
-      image: "/images/service-4.jpg",
+      image: withBase("images/service-4.jpg"),
     },
   ],
 };
@@ -177,32 +179,32 @@ export const portfolioConfig: PortfolioConfig = {
       title: "XcelDry Supreme",
       category: "Calidad Premium - Talla M",
       year: "M: 45-75kg",
-      image: "/images/portfolio-1.jpg",
+      image: withBase("images/portfolio-1.jpg"),
       featured: true,
     },
     {
       title: "XcelDry Supreme",
       category: "Calidad Premium - Talla G",
       year: "G: 75-110kg",
-      image: "/images/portfolio-4.jpg",
+      image: withBase("images/portfolio-4.jpg"),
     },
     {
       title: "XcelDry Extreme",
       category: "Calidad Excelente - Talla M",
       year: "M: 45-75kg",
-      image: "/images/portfolio-2.jpg",
+      image: withBase("images/portfolio-2.jpg"),
     },
     {
       title: "XcelDry Extreme",
       category: "Calidad Excelente - Talla G",
       year: "G: 75-110kg",
-      image: "/images/portfolio-3.jpg",
+      image: withBase("images/portfolio-3.jpg"),
     },
     {
       title: "Suscripción Mensual",
       category: "Entrega Automática a Domicilio",
       year: "Monterrey NL",
-      image: "/images/portfolio-5.jpg",
+      image: withBase("images/portfolio-5.jpg"),
       featured: true,
     },
   ],
@@ -240,7 +242,7 @@ export const testimonialsConfig: TestimonialsConfig = {
       author: "María Elena García",
       role: "Directora",
       company: "Hogar San José - Asilo de Adultos Mayores",
-      image: "/images/testimonial-1.jpg",
+      image: withBase("images/testimonial-1.jpg"),
       rating: 5,
     },
     {
@@ -248,7 +250,7 @@ export const testimonialsConfig: TestimonialsConfig = {
       author: "Roberto Hernández",
       role: "Enfermero Profesional",
       company: "Cuidados Domiciliarios Monterrey",
-      image: "/images/testimonial-2.jpg",
+      image: withBase("images/testimonial-2.jpg"),
       rating: 5,
     },
     {
@@ -256,7 +258,7 @@ export const testimonialsConfig: TestimonialsConfig = {
       author: "Carmen López",
       role: "Hija y Cuidadora",
       company: "Cliente de Suscripción",
-      image: "/images/testimonial-3.jpg",
+      image: withBase("images/testimonial-3.jpg"),
       rating: 5,
     },
   ],
@@ -280,7 +282,7 @@ export const ctaConfig: CTAConfig = {
   buttonText: "Escríbenos por WhatsApp",
   buttonHref: "https://wa.me/522206091683",
   email: "xceldry@gmail.com",
-  backgroundImage: "/images/cta-bg.jpg",
+  backgroundImage: withBase("images/cta-bg.jpg"),
 };
 
 // Footer section configuration
