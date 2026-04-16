@@ -1,14 +1,16 @@
 import { type MouseEvent } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Circle, Mail, MessageCircle } from 'lucide-react';
 import { footerConfig } from '@/config';
-import * as LucideIcons from 'lucide-react';
-import { type ElementType } from 'react';
 
-function getIcon(iconName: string): ElementType {
-  const icons = LucideIcons as unknown as Record<string, ElementType>;
-  return icons[iconName] || LucideIcons.Circle;
+const socialIcons = {
+  MessageCircle,
+  Mail,
+} as const;
+
+function getIcon(iconName: string) {
+  return socialIcons[iconName as keyof typeof socialIcons] || Circle;
 }
 
 export function Footer() {

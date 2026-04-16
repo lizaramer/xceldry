@@ -1,13 +1,19 @@
-import { useState, type ElementType } from 'react';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { useServiceParallax } from '@/hooks/useMouseParallax';
 import { servicesConfig } from '@/config';
-import * as LucideIcons from 'lucide-react';
+import { Boxes, CalendarCheck, Circle, Headphones, Package } from 'lucide-react';
 
-function getIcon(iconName: string): ElementType {
-  const icons = LucideIcons as unknown as Record<string, ElementType>;
-  return icons[iconName] || LucideIcons.Circle;
+const serviceIcons = {
+  Package,
+  Boxes,
+  CalendarCheck,
+  Headphones,
+} as const;
+
+function getIcon(iconName: string) {
+  return serviceIcons[iconName as keyof typeof serviceIcons] || Circle;
 }
 
 interface ServiceCardProps {
