@@ -5,7 +5,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/xceldry/',
+  base: '/',
   plugins: [inspectAttr(), react()],
   build: {
     chunkSizeWarningLimit: 700,
